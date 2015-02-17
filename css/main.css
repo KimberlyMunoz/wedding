@@ -196,13 +196,13 @@ pre {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-device-width: 600px) {
     body{
         font-size: 9px;
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-device-width: 300px) {
     body{
         font-size: 6px;
     }
