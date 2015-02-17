@@ -1,15 +1,16 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+/*---- TEAM ---- */
 
-# TEAM
++ Kimberly Munoz -- ASCII Modifier & Bride -- @kimberlymunoz
++ Kevin Morrell -- Easter Egg Hider & Groom -- @kmorrell827
 
-    <name> -- <role> -- <twitter>
+/*---- THANKS ---- */
 
-# THANKS
++ People who will be celebrating with us!
 
-    <name>
+/*---- TECHNOLOGY ---- */
 
-# TECHNOLOGY COLOPHON
-
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
++ CSS3, HTML5
++ [HTML5 Boilerplate](https://html5boilerplate.com/)
++ jQuery 
++ [Normalize.css](http://necolas.github.io/normalize.css/)
++ [Konami.js by snaptortoise](https://github.com/snaptortoise/konami-js)
