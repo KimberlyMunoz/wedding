@@ -87,11 +87,6 @@ html, body {
     height:100%;
 }
 
-body {
-    color:white;
-    background:black;
-}
-
 pre {
     font-family: 'Courier New', Courier, monospace;
     display: table-cell;
@@ -104,20 +99,42 @@ pre {
     width: 39em;
     height: 100%;
     margin:0 auto;
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
-.top-section {
+.ascii-modal {
+    background: black;
+    color: white;
+    margin: auto;
+    max-width: 800px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 1.5em;
+    position: relative;
+    transform: scale(.9);
+    transition: transform .3s;
+    width: 100%;
+}
+
+.ascii-mask {
+    background:rgba(0,0,0,1);
     height: 100%;
-    min-height: 42em;
-    width:100%;
-	display: table;
+    left: 0;
+    display: flex;
+    overflow: auto;
+    padding: 1.5em;
+    position: fixed;
+    top: 0;
+    transition: opacity .2s;
+    width: 100%;
+    z-index: -1;
 }
 
 #corgiGif {
-    display: table-row;
-	vertical-align: middle;
-	margin: 0 auto;
+    display: block;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* ==========================================================================
