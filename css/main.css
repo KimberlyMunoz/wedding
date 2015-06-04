@@ -89,6 +89,7 @@ pre {
     font-size: 10px;
     width: 39em;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 
