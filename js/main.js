@@ -1,4 +1,3 @@
 var easterEgg = new Konami(function() {
-  $('#corgiGif').removeClass('hidden');
-  $('.ascii-frame').addClass('hidden');
+  $('img').attr('src', 'img/corgi.gif');
 });
