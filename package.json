@@ -1,0 +1,12 @@
+{
+  "name": "kimandkev.in",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "node-sass": "^3.3.2"
+  },
+  "dependencies": {
+    "foundation-sites": "^5.5.2"
+  }
+}
