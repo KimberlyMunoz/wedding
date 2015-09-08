@@ -1,17 +1,38 @@
+// My custom variables
+$font-family-cursive: 'Permanent Marker', cursive;
+$coral: #ea6157;
+
+// Overrides
+$primary-color: $coral;
+$header-font-family: 'Lato', sans-serif;
+
+$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+$font-family-monospace: 'Courier New', Consolas, 'Liberation Mono', Courier, monospace;
+$button-font-color: #fff;
+$button-font-color-alt: #333;
+
+$h1-font-size: 5rem;
+$h2-font-size: 3.5rem;
+$h3-font-size: 2rem;
+// $h4-font-size: rem-calc(27);
+// $h5-font-size: rem-calc(18);
+// $h6-font-size: 1rem;
+
 @import 'normalize.scss';
 @import 'foundation.scss';
 
 
-// Overrides
-
-$font-family-sans-serif: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$font-family-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
-$font-family-monospace: 'Courier New', Consolas, 'Liberation Mono', Courier, monospace;
-
-$font-family-cursive: 'Permanent Marker', cursive;
-
 // Custom Styles
 //-- Typography
+
+h1,h2,h3,h4,h5{
+    &.serif {
+        font-family: $font-family-serif;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
 
 .text-bg { 
 	background-color:rgba(0,0,0,0.5); 
@@ -23,8 +44,8 @@ $font-family-cursive: 'Permanent Marker', cursive;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    padding: 4em;
 }
 
 // Section-by-Section

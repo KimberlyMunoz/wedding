@@ -24,17 +24,17 @@
     <meta property="og:image:url" content="http://wedding.kimandkev.in/img/wedding_screenshot.png" />
     <meta property="og:description" content="Kimberly Munoz and Kevin Morrell are getting married. Save the date!" />
 
-    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300|PT+Serif:400,400italic|Permanent+Marker' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <section id="the-happy-couple" class="full-section">
     <div class="row">
-      <div class="small-6 small-centered columns">
+      <div class="small-12 small-centered large-5 large-centered columns">
         <div class="polaroid">
           <img src="img/KimberlyMunozKevinMorrell.jpg">
           <div class="polaroid__text">
-            Kevin Morell + Kimberly Munoz<br/>
+            Kevin Morell + Kimberly Muñoz<br>
             Getting Married 1/10/16
           </div>
         </div>
@@ -45,26 +45,44 @@
     <div class="row">
       <div class="large-8 columns">
         <h2><span class="text-bg">
-          Join us in Coachella, California
+          Save the date!
         </span></h2>
         <p><span class="text-bg">
           The wedding will take place at the Corona Yacht Club
           at Rancho de los Sueños on January 10th, 2016
         </span></p>
-        <p><span class="text-bg">
-          Details to come.
-        </span></p>
       </div>
-      <div class="large-4 columns">
-        <div class="google-maps">
-          <iframe
-            width="600"
-            height="450"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBhXx72GvmXDO6i0pCYpb9KWC2blCA0q4I
-              &q=Corona+Yacht+Club+Coachella&zoom=10" allowfullscreen>
-          </iframe>
-        </div>
+    </div>
+  </section>
+  <section id="schedule" class="full-section">
+    <div class="row">
+      <div class="small-8 large-4 small-centered large-centered columns text-center">
+        <h2>The Big Day</h2>
+        <p>
+          We'll be having our wedding at the beautiful
+          Corona Yacht Club. Please be sure to mail your
+          RSVPs to reserve a seat.
+        </p>
+        <h3 class="serif"><small>Ceremony - 3:00pm</small></h3>
+        <p>  
+          Corona Yacht Club <br>
+          46600 Tyler Street <br>
+          Coachella, CA 92236 <br>
+        </p>
+        <h3 class="serif"><small>Reception - 4:00pm<small></h3>
+        <p>
+          Same location following
+          cocktail hour.
+        </p>
+        <dl class="accordion" data-accordion>
+          <dd class="accordion-navigation">
+            <a href="#panel1d">Need a place to stay?</a>
+            <div id="panel1d" class="content">
+              We have a block of room for our out-of-town guests at
+              the Fantasy Springs Casino. Call 800-827-2946 and ask for the Morrell-Muñoz Party for special rates.
+            </div>
+          </dd>
+        </dl>
       </div>
     </div>
   </section>
@@ -72,14 +90,26 @@
     <div class="row">
       <div class="small-8 small-center columns">
         <h2>Wedding Registries</h2>
-        <p>We're registered at
-          <a href="http://www.crateandbarrel.com/gift-registry/kevin-morrell-and-kimberly-munoz/r5276383">Crate and Barrel</a> &amp;
-          <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542223093&pwsurl=">Bed Bath &amp; Beyond</a>
-        </p>
+        <p>We're registered at</p>
+          <a href="http://www.crateandbarrel.com/gift-registry/kevin-morrell-and-kimberly-munoz/r5276383" class="button radius">
+            Crate and Barrel
+          </a> 
+          <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542223093&pwsurl=" class="button radius">
+            Bed Bath &amp; Beyond
+          </a>
       </div>
     </div>
   </section>
-  <section id="ascii" class="pull-bottom">
+  <section id="contact-us" class="full-section">
+    <div class="row">
+      <div class="small-12 large-4 large-centered columns text-center">
+        <h2>Questions? Well wishes? Lost your RSVP?</h2>
+        <p>No problem, email us at <a href="mailto:wedding@kimandkev.in">wedding@kimandkev.in</a>.</p> 
+        <p>Alternatively, just call us or our parents for details.</p>
+      </div>
+    </div>
+  </section>
+  <section id="ascii">
 		  <pre class="ascii-art">
                             @@@  _[_]_
                            /(")\  (")
@@ -119,8 +149,10 @@
 	   </pre> 
 	  <div class="show-for-sr">Original ASCII Art by jgs on chris.com</div>
   </section>
-
 <script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.accordion.js"></script>
 <script src="js/konami.js"></script>
 <script src="js/main.js"></script>
 <script>
