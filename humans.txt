@@ -10,7 +10,10 @@
 /*---- TECHNOLOGY ---- */
 
 + CSS3, HTML5
++ Sass
++ Gulp
 + [HTML5 Boilerplate](https://html5boilerplate.com/)
 + jQuery 
 + [Normalize.css](http://necolas.github.io/normalize.css/)
++ [Zurb Foundation](http://foundation.zurb.com/)
 + [Konami.js by snaptortoise](https://github.com/snaptortoise/konami-js)
