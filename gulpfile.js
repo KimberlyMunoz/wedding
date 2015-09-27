@@ -1,6 +1,19 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var uncss = require('gulp-uncss');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+ 
+gulp.task('imagemin', function () {
+    return gulp.src('./images/*')
+        .pipe(imagemin({
+        	optimizationLevel: 3,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./img'));
+});
 
 gulp.task('sass', function () {
   gulp.src('./scss/main.scss')
@@ -21,4 +34,4 @@ gulp.task('sass:watch', function () {
   gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'uncss']);
+gulp.task('default', ['sass', 'uncss', 'imagemin']);
