@@ -1,7 +1,7 @@
 /*---- TEAM ---- */
 
 + Kimberly Munoz -- ASCII Modifier & Bride -- @kimberlymunoz
-+ Kevin Morrell -- Easter Egg Hider & Groom -- @kmorrell827
++ Kevin Morrell -- Easter Egg Hider & Groom -- @kmorrell27
 
 /*---- THANKS ---- */
 
