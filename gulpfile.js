@@ -58,7 +58,7 @@ gulp.task('minify:main', function () {
     return gulp.src('./js/main.js')
         .pipe(filesize())
         .pipe(uglify())
-        .pipe(rename('vendor.min.js'))
+        .pipe(rename('main.min.js'))
         .pipe(gulp.dest('./js'))
         .pipe(filesize());
 });
