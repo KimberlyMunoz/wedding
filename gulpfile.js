@@ -16,7 +16,10 @@ var pngquant = require('imagemin-pngquant');
 
 
 gulp.task('vendor', function() {  
-    return gulp.src('./_lib/*.js')
+    return gulp.src(['./_lib/jquery/*.js',
+                    './_lib/foundation/foundation.js',
+                    './_lib/foundation/foundation.accordion.js',
+                    './_lib/*.js'])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('./js'));
 });
@@ -28,7 +31,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('uncss', function () {
+gulp.task('uncss', ['sass'], function () {
     return gulp.src('./css/main.css')
         .pipe(uncss({
             html: ['index.html']
@@ -36,7 +39,7 @@ gulp.task('uncss', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('minify:css', function() {
+gulp.task('minify:css', ['uncss'], function() {
     return gulp.src('./css/main.css')
         .pipe(sourcemaps.init())
         .pipe(minifycss({compatibility: 'ie7'}))
@@ -45,7 +48,7 @@ gulp.task('minify:css', function() {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('minify:vendor', function () {
+gulp.task('minify:vendor', ['vendor'], function () {
     return gulp.src('./js/vendor.js')
         .pipe(filesize())
         .pipe(uglify())
@@ -58,7 +61,7 @@ gulp.task('minify:main', function () {
     return gulp.src('./js/main.js')
         .pipe(filesize())
         .pipe(uglify())
-        .pipe(rename('vendor.min.js'))
+        .pipe(rename('main.min.js'))
         .pipe(gulp.dest('./js'))
         .pipe(filesize());
 });

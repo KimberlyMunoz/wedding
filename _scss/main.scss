@@ -98,7 +98,16 @@ pre {
 }
 
 #the-happy-couple {
+    background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+    background-size: cover;
+}
+
+.the-happy-couple__join-us {
     background: #000;
+    h1, h2 { 
+        color: #fff; 
+        font-size: 3em; 
+    }
 }
 
 //-- #location

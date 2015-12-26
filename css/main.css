@@ -93,6 +93,11 @@ a:hover {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
 /**
  * Address styling not present in IE 8/9.
  */
@@ -115,10 +120,6 @@ small {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-
-img {
-  border: 0;
-}
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
@@ -294,20 +295,6 @@ a:hover {
   cursor: pointer;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-img {
-  -ms-interpolation-mode: bicubic;
-}
-
-img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .row {
   margin: 0 auto;
   max-width: 62.5rem;
@@ -329,6 +316,10 @@ img {
   padding-right: 0.9375rem;
   width: 100%;
   float: left;
+}
+
+.columns + .columns:last-child {
+  float: right;
 }
 
 @media only screen {
@@ -396,47 +387,6 @@ img {
   .columns.large-centered:last-child {
     float: none;
   }
-}
-
-.accordion {
-  margin-bottom: 0;
-}
-
-.accordion:before,
-.accordion:after {
-  content: " ";
-  display: table;
-}
-
-.accordion:after {
-  clear: both;
-}
-
-.accordion .accordion-navigation,
-.accordion dd {
-  display: block;
-  margin-bottom: 0 !important;
-}
-
-.accordion .accordion-navigation > a,
-.accordion dd > a {
-  background: #EFEFEF;
-  color: #222222;
-  display: block;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1rem;
-  padding: 1rem;
-}
-
-.accordion .accordion-navigation > a:hover,
-.accordion dd > a:hover {
-  background: #e3e3e3;
-}
-
-.accordion .accordion-navigation > .content,
-.accordion dd > .content {
-  display: none;
-  padding: 0.9375rem;
 }
 
 /* Accessibility - hides the forward slash */
@@ -574,8 +524,7 @@ select::-ms-expand {
 /* Typography resets */
 
 div,
-dl,
-dd,
+h1,
 h2,
 h3,
 pre,
@@ -610,6 +559,7 @@ p {
 
 /* Default header styles */
 
+h1,
 h2,
 h3 {
   color: #222222;
@@ -626,6 +576,10 @@ h3 small {
   color: #6f6f6f;
   font-size: 60%;
   line-height: 0;
+}
+
+h1 {
+  font-size: 4.375rem;
 }
 
 h2 {
@@ -645,23 +599,11 @@ small {
 
 /* Lists */
 
-dl {
-  font-family: inherit;
-  font-size: 1rem;
-  line-height: 1.6;
-  list-style-position: outside;
-  margin-bottom: 1.25rem;
-}
-
 /* Unordered Lists */
 
 /* Ordered Lists */
 
 /* Definition Lists */
-
-dl dd {
-  margin-bottom: 0.75rem;
-}
 
 /* Abbreviations */
 
@@ -670,9 +612,14 @@ dl dd {
 /* Microformats */
 
 @media only screen and (min-width: 40.0625em) {
+  h1,
   h2,
   h3 {
     line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 5rem;
   }
 
   h2 {
@@ -745,21 +692,9 @@ dl dd {
     content: " (" attr(href) ")";
   }
 
-  a[href^="#"]:after {
-    content: "";
-  }
-
   pre {
     border: 1px solid #999999;
     page-break-inside: avoid;
-  }
-
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
   }
 
 @page {
@@ -817,31 +752,19 @@ pre {
   padding-top: 3em;
 }
 
-.polaroid {
-  border: 1em solid #FFFFFF;
-  border-radius: 3px;
-  width: 500px;
-  max-width: 100%;
-  background: #FFFFFF;
-  -ms-transform: rotate(-3deg);
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-
-.polaroid img {
-  width: 100%;
-}
-
-.polaroid__text {
-  font-family: "Permanent Marker", cursive;
-  text-align: center;
-  color: #000000;
-  min-height: 3em;
-  padding-top: 1em;
-}
-
 #the-happy-couple {
+  background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+  background-size: cover;
+}
+
+.the-happy-couple__join-us {
   background: #000;
+}
+
+.the-happy-couple__join-us h1,
+.the-happy-couple__join-us h2 {
+  color: #fff;
+  font-size: 3em;
 }
 
 #location {
