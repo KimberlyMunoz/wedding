@@ -19,6 +19,9 @@ $h3-font-size: 1.5rem;
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
 
+//$small-breakpoint: em-calc(640);
+$medium-breakpoint: em-calc(900);
+$large-breakpoint:  em-calc(1200);
 @import '../_lib/normalize.scss';
 @import '../_lib/foundation.scss';
 
@@ -32,8 +35,15 @@ h1,h2,h3,h4,h5 {
         font-style: italic;
     }
 }
+html{
+    @media #{$small-only} {
+        font-size: 14px
+    }
+}
 
 p { padding: 0 0 0.5em 0; }
+
+img { max-width: 100% }
 
 .text-bg { 
 	background-color:rgba(0,0,0,0.5); 
@@ -86,30 +96,14 @@ pre {
 }
 
 //-- #the-happy-couple
-// 	 Shake It! Shake It!
-.polaroid {
-    border: 1em solid $white;
-    border-radius: 3px;
-    width: 500px;
-    max-width: 100%;
-    background: $white;
-    -ms-transform: rotate(-3deg); 
-    -webkit-transform: rotate(-3deg); 
-    transform: rotate(-3deg);
-    img {width: 100%;}
-}
-
-.polaroid__text {
-	font-family: $font-family-cursive;
-    text-align: center;
-    color: $black;
-    min-height: 3em;
-    padding-top: 1em;
-}
 
 #the-happy-couple {
-    background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
-    background-size: cover;
+    background: $black;
+    
+    @media #{$medium-up} {
+        background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+        background-size: cover;
+    }
 }
 
 .the-happy-couple__join-us {

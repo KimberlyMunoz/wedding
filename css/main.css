@@ -117,6 +117,10 @@ h1 {
  * Remove border when inside `a` element in IE 8/9/10.
  */
 
+img {
+  border: 0;
+}
+
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
@@ -269,28 +273,28 @@ meta.foundation-mq-medium {
 }
 
 meta.foundation-mq-medium-only {
-  font-family: "/only screen and (min-width:40.0625em) and (max-width:64em)/";
+  font-family: "/only screen and (min-width:40.0625em) and (max-width:em-calc(900))/";
   width: 40.0625em;
 }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.0625em)/";
-  width: 64.0625em;
+  font-family: "/only screen and (min-width:em-calc(900)0.0625em)/";
+  width: em-calc(900) 0.0625em;
 }
 
 meta.foundation-mq-large-only {
-  font-family: "/only screen and (min-width:64.0625em) and (max-width:90em)/";
-  width: 64.0625em;
+  font-family: "/only screen and (min-width:em-calc(900)0.0625em) and (max-width:em-calc(1200))/";
+  width: em-calc(900) 0.0625em;
 }
 
 meta.foundation-mq-xlarge {
-  font-family: "/only screen and (min-width:90.0625em)/";
-  width: 90.0625em;
+  font-family: "/only screen and (min-width:em-calc(1200)0.0625em)/";
+  width: em-calc(1200) 0.0625em;
 }
 
 meta.foundation-mq-xlarge-only {
-  font-family: "/only screen and (min-width:90.0625em) and (max-width:120em)/";
-  width: 90.0625em;
+  font-family: "/only screen and (min-width:em-calc(1200)0.0625em) and (max-width:120em)/";
+  width: em-calc(1200) 0.0625em;
 }
 
 meta.foundation-mq-xxlarge {
@@ -341,6 +345,20 @@ a:hover {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .row {
   margin: 0 auto;
   max-width: 62.5rem;
@@ -376,10 +394,6 @@ a:hover {
     float: left;
   }
 
-  .small-8 {
-    width: 66.66667%;
-  }
-
   .small-12 {
     width: 100%;
   }
@@ -392,9 +406,17 @@ a:hover {
     padding-right: 0.9375rem;
     float: left;
   }
+
+  .medium-5 {
+    width: 41.66667%;
+  }
+
+  .medium-offset-7 {
+    margin-left: 58.33333% !important;
+  }
 }
 
-@media only screen and (min-width: 64.0625em) {
+@media only screen and (min-width: em-calc(900) 0.0625em) {
   .columns {
     position: relative;
     padding-left: 0.9375rem;
@@ -676,13 +698,43 @@ code {
 
 /* small displays */
 
+@media only screen {
+  .show-for-small-only {
+    display: inherit !important;
+  }
+}
+
 /* medium displays */
+
+@media only screen and (min-width: 40.0625em) {
+  .show-for-small-only {
+    display: none !important;
+  }
+}
 
 /* large displays */
 
+@media only screen and (min-width: em-calc(900) 0.0625em) {
+  .show-for-small-only {
+    display: none !important;
+  }
+}
+
 /* xlarge displays */
 
+@media only screen and (min-width: em-calc(1200) 0.0625em) {
+  .show-for-small-only {
+    display: none !important;
+  }
+}
+
 /* xxlarge displays */
+
+@media only screen and (min-width: 120.0625em) {
+  .show-for-small-only {
+    display: none !important;
+  }
+}
 
 /* Orientation targeting */
 
@@ -740,6 +792,14 @@ code {
     page-break-inside: avoid;
   }
 
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
 @page {
     margin: .5cm;
 }
@@ -764,8 +824,18 @@ h4.serif {
   font-style: italic;
 }
 
+@media only screen and (max-width: 40em) {
+  html {
+    font-size: 14px;
+  }
+}
+
 p {
   padding: 0 0 0.5em 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 .full-section {
@@ -806,8 +876,14 @@ pre {
 }
 
 #the-happy-couple {
-  background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
-  background-size: cover;
+  background: #000000;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  #the-happy-couple {
+    background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+    background-size: cover;
+  }
 }
 
 .the-happy-couple__join-us {
