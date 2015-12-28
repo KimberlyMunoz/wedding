@@ -20,8 +20,8 @@ $h3-font-size: 1.5rem;
 // $h6-font-size: 1rem;
 
 //$small-breakpoint: em-calc(640);
-$medium-breakpoint: em-calc(900);
-$large-breakpoint:  em-calc(1200);
+//$medium-breakpoint: em-calc(900);
+//$large-breakpoint:  em-calc(1200);
 @import '../_lib/normalize.scss';
 @import '../_lib/foundation.scss';
 
@@ -29,26 +29,19 @@ $large-breakpoint:  em-calc(1200);
 // Custom Styles
 //-- Typography
 
-h1,h2,h3,h4,h5 {
+h1, h2, h3, h4, h5 {
     &.serif {
         font-family: $font-family-serif;
         font-style: italic;
     }
 }
-html{
+html {
     @media #{$small-only} {
         font-size: 14px
     }
 }
 
-p { padding: 0 0 0.5em 0; }
-
 img { max-width: 100% }
-
-.text-bg { 
-	background-color:rgba(0,0,0,0.5); 
-	padding: .25em 0;
-}
 
 //-- Layout
 .full-section {
@@ -62,6 +55,8 @@ img { max-width: 100% }
 .black-box {
     color: $white;
     background: $black;
+    padding-top: 1em;
+    padding-bottom: 1em;
 
     h1, h2, h3, h4, h5 {
         color: $white;
@@ -142,7 +137,6 @@ pre {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50%;
-
 }
 
 
