@@ -106,10 +106,6 @@ h1 {
  * Address inconsistent and variable font size in all browsers.
  */
 
-small {
-  font-size: 80%;
-}
-
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
@@ -148,6 +144,7 @@ pre {
  * Address odd `em`-unit font size rendering in all browsers.
  */
 
+code,
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -386,16 +383,6 @@ a:hover {
   .small-12 {
     width: 100%;
   }
-
-  .columns.small-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-  }
-
-  .columns.small-centered:last-child {
-    float: none;
-  }
 }
 
 @media only screen and (min-width: 40.0625em) {
@@ -421,10 +408,6 @@ a:hover {
 
   .large-5 {
     width: 41.66667%;
-  }
-
-  .large-8 {
-    width: 66.66667%;
   }
 
   .columns.large-centered {
@@ -576,6 +559,7 @@ div,
 h1,
 h2,
 h3,
+h4,
 pre,
 p {
   margin: 0;
@@ -610,7 +594,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: #222222;
   font-family: "Lato", sans-serif;
   font-style: normal;
@@ -621,29 +606,33 @@ h3 {
   text-rendering: optimizeLegibility;
 }
 
-h3 small {
-  color: #6f6f6f;
-  font-size: 60%;
-  line-height: 0;
-}
-
 h1 {
-  font-size: 4.375rem;
+  font-size: 3.375rem;
 }
 
 h2 {
-  font-size: 2.875rem;
+  font-size: 2.375rem;
 }
 
 h3 {
-  font-size: 1.6875rem;
+  font-size: 1.1875rem;
+}
+
+h4 {
+  font-size: 1.125rem;
 }
 
 /* Helpful Typography Defaults */
 
-small {
-  font-size: 60%;
-  line-height: inherit;
+code {
+  background-color: #f8f8f8;
+  border-color: #dfdfdf;
+  border-style: solid;
+  border-width: 1px;
+  color: #333333;
+  font-family: "Courier New", Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: normal;
+  padding: 0.125rem 0.3125rem 0.0625rem;
 }
 
 /* Lists */
@@ -663,20 +652,25 @@ small {
 @media only screen and (min-width: 40.0625em) {
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     line-height: 1.4;
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.4375rem;
   }
 }
 
@@ -765,15 +759,13 @@ small {
 
 /* Print visibility */
 
-h3.serif {
+h4.serif {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: bold;
   font-style: italic;
 }
 
-.text-bg {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: .25em 0;
+p {
+  padding: 0 0 0.5em 0;
 }
 
 .full-section {
@@ -782,6 +774,18 @@ h3.serif {
   justify-content: center;
   min-height: 100%;
   padding: 4em;
+}
+
+.black-box {
+  color: #FFFFFF;
+  background: #000000;
+}
+
+.black-box h1,
+.black-box h2,
+.black-box h3,
+.black-box h4 {
+  color: #FFFFFF;
 }
 
 pre {
@@ -817,27 +821,22 @@ pre {
 }
 
 #location {
-  color: #FFFFFF;
-  text-shadow: 3px 3px 3px #000;
   background: url(../img/corona_yacht_club.jpg);
   background-size: cover;
 }
 
-#location h2 {
-  color: #FFFFFF;
-}
-
-#location p {
-  font-size: 1.5em;
-  margin: 0 0 0.5em 0;
+#fisheye {
+  background: #000 url(../img/Kimberly-Munoz-Kevin-Morrell-Fisheye.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 #registry {
-  background: url(../img/stripes.png);
-  font-family: "Permanent Marker", cursive;
   font-size: 1.5em;
 }
 
-#registry h2 {
-  font-family: "Permanent Marker", cursive;
+#contact-us {
+  background: #000 url(../img/Kimberly-Munoz-Ring.jpg);
+  background-size: cover;
 }

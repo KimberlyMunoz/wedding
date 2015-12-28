@@ -12,9 +12,9 @@ $font-family-monospace: 'Courier New', Consolas, 'Liberation Mono', Courier, mon
 $button-font-color: #fff;
 $button-font-color-alt: #333;
 
-$h1-font-size: 5rem;
-$h2-font-size: 3.5rem;
-$h3-font-size: 2rem;
+$h1-font-size: 4rem;
+$h2-font-size: 3rem;
+$h3-font-size: 1.5rem;
 // $h4-font-size: rem-calc(27);
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
@@ -26,13 +26,14 @@ $h3-font-size: 2rem;
 // Custom Styles
 //-- Typography
 
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5 {
     &.serif {
         font-family: $font-family-serif;
-        font-weight: bold;
         font-style: italic;
     }
 }
+
+p { padding: 0 0 0.5em 0; }
 
 .text-bg { 
 	background-color:rgba(0,0,0,0.5); 
@@ -46,6 +47,15 @@ h1,h2,h3,h4,h5{
     justify-content: center;
     min-height: 100%;
     padding: 4em;
+}
+
+.black-box {
+    color: $white;
+    background: $black;
+
+    h1, h2, h3, h4, h5 {
+        color: $white;
+    }
 }
 
 // Section-by-Section
@@ -112,14 +122,9 @@ pre {
 
 //-- #location
 //   Where is this wedding going to be?
-#location {
-    color: $white;
-    text-shadow: 3px 3px 3px #000;
+#location {    
     background: url(../img/corona_yacht_club.jpg);
     background-size: cover;
-
-    h2 { color: $white; }
-    p { font-size: 1.5em; margin: 0 0 0.5em 0;}
 }
 
 
@@ -138,15 +143,21 @@ pre {
     }
 }
 
+#fisheye {
+    background: #000 url(../img/Kimberly-Munoz-Kevin-Morrell-Fisheye.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+}
 
 
 //-- #registry
 #registry {
-    background: url(../img/stripes.png);
-    font-family: $font-family-cursive;
     font-size: 1.5em;
-    h2 {
-    	font-family: $font-family-cursive;
-    }
 }
 
+#contact-us {
+    background: #000 url(../img/Kimberly-Munoz-Ring.jpg);
+    background-size: cover;
+}
