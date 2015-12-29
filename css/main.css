@@ -140,16 +140,11 @@ img {
  * Contain overflow in all browsers.
  */
 
-pre {
-  overflow: auto;
-}
-
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
 
-code,
-pre {
+code {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -529,7 +524,6 @@ h1,
 h2,
 h3,
 h4,
-pre,
 p {
   margin: 0;
   padding: 0;
@@ -649,17 +643,12 @@ code {
   .show-for-small-only {
     display: inherit !important;
   }
-
-  .show-for-large-only {
-    display: none !important;
-  }
 }
 
 /* medium displays */
 
 @media only screen and (min-width: 40.0625em) {
-  .show-for-small-only,
-  .show-for-large-only {
+  .show-for-small-only {
     display: none !important;
   }
 }
@@ -667,10 +656,6 @@ code {
 /* large displays */
 
 @media only screen and (min-width: 64.0625em) {
-  .show-for-large-only {
-    display: inherit !important;
-  }
-
   .show-for-small-only {
     display: none !important;
   }
@@ -679,8 +664,7 @@ code {
 /* xlarge displays */
 
 @media only screen and (min-width: 90.0625em) {
-  .show-for-small-only,
-  .show-for-large-only {
+  .show-for-small-only {
     display: none !important;
   }
 }
@@ -688,8 +672,7 @@ code {
 /* xxlarge displays */
 
 @media only screen and (min-width: 120.0625em) {
-  .show-for-small-only,
-  .show-for-large-only {
+  .show-for-small-only {
     display: none !important;
   }
 }
@@ -711,14 +694,6 @@ code {
 /* Specific visibility for tables */
 
 /* Screen reader-specific classes */
-
-.show-for-sr {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
-}
 
 /*
        * Print styles.
@@ -743,11 +718,6 @@ code {
 
   a[href]:after {
     content: " (" attr(href) ")";
-  }
-
-  pre {
-    border: 1px solid #999999;
-    page-break-inside: avoid;
   }
 
   img {
@@ -814,23 +784,6 @@ img {
   color: #FFFFFF;
 }
 
-pre {
-  font-family: "Courier New", Consolas, "Liberation Mono", Courier, monospace;
-  display: block;
-  vertical-align: middle;
-  line-height: 1;
-  font-size: 10px;
-  width: 39em;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-#ascii {
-  background: #000000;
-  color: #FFFFFF;
-  padding-top: 3em;
-}
-
 #the-happy-couple {
   background: #000000;
 }
@@ -853,8 +806,14 @@ pre {
 }
 
 #location {
-  background: url(../img/corona_yacht_club.jpg);
+  background: url(../img/corona_yacht_club-small.jpg);
   background-size: cover;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  #location {
+    background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+  }
 }
 
 #fisheye {

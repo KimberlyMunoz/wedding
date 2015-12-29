@@ -65,24 +65,8 @@ img { max-width: 100% }
 
 // Section-by-Section
 
-//-- Ascii art and easter eggs
-pre {
-    font-family: $font-family-monospace;
-    display: block;
-    vertical-align: middle;
-    line-height: 1;
-    font-size: 10px;
-    width: 39em;
-    margin: 0 auto;
-    overflow: hidden;
-}
+//-- easter eggs
 
-#ascii {
-    background: $black;
-    color: $white;
-    padding-top: 3em;
-}
-    
 #corgiGif {
     display: block;
     vertical-align: middle;
@@ -112,8 +96,11 @@ pre {
 //-- #location
 //   Where is this wedding going to be?
 #location {    
-    background: url(../img/corona_yacht_club.jpg);
+    background: url(../img/corona_yacht_club-small.jpg);
     background-size: cover;
+    @media #{$medium-up} {
+        background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+    }
 }
 
 
