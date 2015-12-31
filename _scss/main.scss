@@ -99,7 +99,8 @@ img { max-width: 100% }
     background: url(../img/corona_yacht_club-small.jpg);
     background-size: cover;
     @media #{$medium-up} {
-        background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+        background: url(../img/corona_yacht_club.jpg);
+        background-size: cover;
     }
 }
 

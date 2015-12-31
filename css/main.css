@@ -812,7 +812,8 @@ img {
 
 @media only screen and (min-width: 40.0625em) {
   #location {
-    background: url(../img/Kimberly-Munoz-Kevin-Morrell-walking-Joshua-Tree.jpg);
+    background: url(../img/corona_yacht_club.jpg);
+    background-size: cover;
   }
 }
 
