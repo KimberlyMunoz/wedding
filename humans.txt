@@ -1,11 +1,14 @@
 /*---- TEAM ---- */
 
-+ Kimberly Munoz -- ASCII Modifier & Bride -- @kimberlymunoz
-+ Kevin Morrell -- Easter Egg Hider & Groom -- @kmorrell27
++ Kimberly Munoz -- Bride -- @kimberlymunoz
++ Kevin Morrell -- Groom -- @kmorrell27
++ Randy and Ashley Durham -- Photographers -- randyandashley.com
 
 /*---- THANKS ---- */
 
 + People who will be celebrating with us!
++ Yvonne and Garrett for reporting a few bugs over slack
++ All of our beta-testers at our bridal shower
 
 /*---- TECHNOLOGY ---- */
 
