@@ -34,7 +34,7 @@ gulp.task('sass', function () {
 gulp.task('uncss', ['sass'], function () {
     return gulp.src('./css/main.css')
         .pipe(uncss({
-            html: ['index.html']
+            html: ['index.html', 'photos/index.html']
         }))
         .pipe(gulp.dest('./css'));
 });

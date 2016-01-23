@@ -420,6 +420,12 @@ img {
   color: #fff;
 }
 
+.button.expanded {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
 .button.radius {
   border-radius: 3px;
 }
@@ -551,6 +557,11 @@ p {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
+}
+
+p.lead {
+  font-size: 1.21875rem;
+  line-height: 1.6;
 }
 
 /* Default header styles */
@@ -831,4 +842,12 @@ img {
 #contact-us {
   background: #000 url(../img/Kimberly-Munoz-Ring.jpg);
   background-size: cover;
+}
+
+#photos {
+  min-height: 100%;
+  padding: 4em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }

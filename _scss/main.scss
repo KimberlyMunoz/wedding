@@ -48,8 +48,8 @@ img { max-width: 100% }
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100%;
-    padding: 4em;
+        min-height: 100%;
+        padding: 4em;
 }
 
 .black-box {
@@ -63,6 +63,10 @@ img { max-width: 100% }
     }
 }
 
+.float-middle {
+    margin-left: auto;
+    margin-right: auto;
+}
 // Section-by-Section
 
 //-- easter eggs
@@ -136,4 +140,12 @@ img { max-width: 100% }
 #contact-us {
     background: #000 url(../img/Kimberly-Munoz-Ring.jpg);
     background-size: cover;
+}
+
+#photos {
+    min-height: 100%;
+    padding: 4em; 
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;  
 }
